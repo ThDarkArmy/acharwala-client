@@ -8,7 +8,7 @@ const BestSellers = () => {
       name: 'Spicy Mango Pickle',
       price: '₹299',
       originalPrice: '₹399',
-      image: 'https://images.unsplash.com/photo-1586201375765-4e6847a123b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://www.doctorschoiceoil.com/wp-content/uploads/2023/09/Spicy-Mango-Pickle-1200x900.png',
       rating: 4.8,
       reviews: 124
     },
@@ -17,7 +17,7 @@ const BestSellers = () => {
       name: 'Mixed Vegetable Achar',
       price: '₹349',
       originalPrice: '₹449',
-      image: 'https://images.unsplash.com/photo-1603108539750-6edf36c9c1b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://img-global.cpcdn.com/recipes/e94c1a97f25d23d5/1200x630cq80/photo.jpg',
       rating: 4.7,
       reviews: 98
     },
@@ -26,7 +26,7 @@ const BestSellers = () => {
       name: 'Garlic Chili Pickle',
       price: '₹279',
       originalPrice: '₹379',
-      image: 'https://images.unsplash.com/photo-1597237154673-fff2a3abf3a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://vegbuffet.com/wp-content/uploads/2021/01/pickled-garlic-with-green-chili.jpg',
       rating: 4.9,
       reviews: 156
     },
@@ -35,7 +35,7 @@ const BestSellers = () => {
       name: 'Sweet Tamarind Chutney',
       price: '₹249',
       originalPrice: '₹349',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://www.seriouseats.com/thmb/XmE2cwnQZg5pgPVUljKdc4EGmro=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sweet-tamarind-chutney-recipe-02-2-ff7e236a29604f5eb7c64b417076cf45.jpg',
       rating: 4.6,
       reviews: 87
     }

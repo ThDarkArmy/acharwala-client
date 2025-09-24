@@ -3,14 +3,14 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="hero-section relative h-screen flex items-center justify-center">
+    <section className="hero-section relative flex items-center justify-center">
       <div 
         className="hero-bg absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1602524818609-2d5b2c42f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")'
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
       </div>
       
       <div className="hero-content relative z-10 text-center text-white max-w-4xl mx-auto px-4">
@@ -32,7 +32,15 @@ const Hero = () => {
 
       <style jsx>{`
         .hero-section {
-          min-height: 100vh;
+          min-height: 75vh;
+          background: linear-gradient(135deg, 
+            #d32f2f 0%, 
+            #f57c00 25%, 
+            #ffa000 50%, 
+            #f57c00 75%, 
+            #d32f2f 100%);
+          background-size: 400% 400%;
+          animation: gradientShift 8s ease infinite;
         }
         .animate-fade-in {
           animation: fadeInUp 1s ease-out;
@@ -46,6 +54,11 @@ const Hero = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        @keyframes gradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
       `}</style>
     </section>
