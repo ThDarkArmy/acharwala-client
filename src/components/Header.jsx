@@ -42,11 +42,6 @@ const Header = () => {
       subcategories: ['Coconut Chutney', 'Mint Chutney', 'Tamarind Chutney', 'Tomato Chutney']
     },
     {
-      name: 'Oils & Masalas',
-      icon: '🫙',
-      subcategories: ['Mustard Oil', 'Sesame Oil', 'Pickle Masala', 'Special Spices']
-    },
-    {
       name: 'Custom',
       icon: '🎨',
       subcategories: ['Build Your Own', 'Gift Packs', 'Combo Offers']
