@@ -8,9 +8,12 @@ import Footer from "./components/Footer";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 import Header from "./components/Header";
 import OTPVerificationPage from "./pages/OtpVerificationPage";
+import ProductPage from "./pages/product/ProductPage";
+import ProductListPage from "./pages/product-list/ProductList";
+import Cart from "./pages/cart/Cart";
 
 
 const App = ()=> {
@@ -25,6 +28,9 @@ const App = ()=> {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/otp-verification" element={<OTPVerificationPage/>}/>
         <Route path="/reset-password" element={<ForgetPassword/>}/>
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/collections/:category" element={<ProductListPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       </div>
      

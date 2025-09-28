@@ -9,8 +9,10 @@ import {
   ChevronDown,
   Heart
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
@@ -87,7 +89,10 @@ const Header = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-3xl font-bold text-amber-700 flex items-center">
+              <div 
+                className="text-3xl font-bold text-amber-700 flex items-center cursor-pointer"
+                onClick={() => navigate('/')}
+              >
                 <span className="text-4xl">🥒</span>
                 <span className="ml-2 bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">
                   AcharWala
@@ -112,7 +117,7 @@ const Header = () => {
             {/* Action Buttons */}
             <div className="flex items-center space-x-4">
               {/* Wishlist */}
-              <button className="hidden md:flex items-center text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-lg hover:bg-amber-50">
+              <button onClick={()=> navigate("/cart")} className="hidden cursor-pointer md:flex items-center text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-lg hover:bg-amber-50">
                 <Heart className="h-5 w-5" />
                 <span className="ml-1 text-sm hidden lg:block">Wishlist</span>
               </button>
@@ -124,7 +129,7 @@ const Header = () => {
               </button>
 
               {/* Cart */}
-              <button className="flex items-center text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-lg hover:bg-amber-50 relative">
+              <button onClick={()=> navigate("/cart")} className="flex items-center cursor-pointer text-gray-700 hover:text-amber-600 transition-colors p-2 rounded-lg hover:bg-amber-50 relative">
                 <ShoppingCart className="h-5 w-5" />
                 <span className="ml-1 text-sm hidden lg:block">Cart</span>
                 <span className="absolute -top-1 -right-1 bg-amber-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold">
@@ -174,6 +179,7 @@ const Header = () => {
                                   <li key={subcategory}>
                                     <a
                                       href="#"
+                                      onClick={() => navigate(`/collections/${category.name}?category=${subcategory}`)}
                                       className="text-gray-600 hover:text-amber-600 transition-colors block py-2 px-3 rounded-lg hover:bg-amber-50"
                                     >
                                       {subcategory}
@@ -199,7 +205,9 @@ const Header = () => {
                                   </div>
                                 ))}
                               </div>
-                              <button className="w-full mt-4 bg-amber-500 hover:bg-amber-600 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors">
+                              <button
+                              onClick={() => navigate(`/collections/${category.name}`)}
+                               className="w-full mt-4 cursor-pointer bg-amber-500 hover:bg-amber-600 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors">
                                 View All
                               </button>
                             </div>
